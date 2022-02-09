@@ -2,14 +2,23 @@
 
 {% block title %} Fleur Develey - Accueil {% endblock %}
 
-{% block body %}
+{% block style %}
+	<style>
+		body {
+			background: url("/img/bg-masthead.jpg") no-repeat center center fixed;
+  			background-size: cover; 
+		}
+	</style>
+{% endblock %}
+
+{% block header %}
 	<section id="home">
 		<div class="container px-4 px-lg-5">
 			<div class="row gx-4 gx-lg-5">
 				<div class="col-lg-6 ">
 					<h3 class="text-white mt-4">Fleur DEVELEY</h3>
                 	<h1 class="text-white-50 mt-3">Développeuse PHP / Symfony</h1>
-					<a class="btn mt-3" href="#porfolio">portfolio</a>
+					<a class="btn mt-3" href="{{ asset('/portfolio') }}">portfolio</a>
 				</div>
 			</div>
 		</div>
