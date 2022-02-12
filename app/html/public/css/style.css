@@ -7,20 +7,39 @@ body {
   margin-top: 250px;
 }
 
+#projects {
+  display: block;
+  margin-top: 60px;
+}
+
 .btn {
-  color: #fff;
-  background-color: #f4623a;
-  border-color: #f4623a;
+    padding: 1.10rem;
+  font-size: 16px;
+}
+
+.btn,
+.btn-portfolio {
   padding: 1.10rem;
   font-size: 16px;
   font-weight: bold;
-  text-transform: uppercase;
   border: none;
   border-radius: 10rem;
 }
 
-.btn:hover {
+.btn:hover,
+.btn,
+.badge {
   color: #fff;
   background-color: #cf5331;
 }
 
+.btn,
+.badge {
+  border-color: #f4623a;
+  text-transform: uppercase;
+}
+
+.fa-globe,
+.fa-github {
+  color:#fff;
+}
