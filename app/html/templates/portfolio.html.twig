@@ -14,10 +14,12 @@
 	<section class="portfolio bg-light" id="projects">
 		<div
 			class="container px-4 px-lg-5">
+
 			<!-- Featured Project Row-->
 			<div class="row gx-0 mb-4 mb-lg-5 align-items-center">
 				<div class="col-xl-8 col-lg-7">
-					<img class="img-fluid mb-3 mb-lg-0" src="{{ asset('/img/bureau.png') }}" alt="desk"/>
+					<img class="img-fluid mb-3 mb-lg-0" src="{{ asset('/img/bureau.png') }}" 
+					alt="desk"/>
 				</div>
 				<div class="col-xl-4 col-lg-5">
 					<div class="featured-text text-center text-lg-left">
@@ -33,21 +35,28 @@
 			{% for project in projects %}
 				<div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
 					<div class="col-lg-6">
-						<img class="img-fluid" src="/img/{{  project.image }}" alt="{{ project.name }}"/></div>
+						<img class="img-fluid" src="/img/{{  project.image }}" 
+						alt="{{ project.name }}"/></div>
 					<div class="col-lg-6">
 						<div class="bg-black text-center h-100 project">
 							<div class="d-flex h-100">
 								<div class="project-text w-100 my-auto text-center text-lg-left">
 									<h4 class="text-white mb-3">{{ project.name }}</h4>
-									<p class="mb-0 text-white-50 mb-3">{{ project.description }}</p>
+									<p class="mb-0 text-white-50 mb-3">
+										{{ project.description }}
+									</p>
 									<div class="d-flex flex-wrap justify-content-around mb-3">
                 						<h5><span class="badge">SYMFONY</span></h5>
 										<h5><span class="badge">COMPOSER</span></h5>
 										<h5><span class="badge">BOOTSTRAP</span></h5>
 										<h5><span class="badge">UML</span></h5>
               						</div>
-									<a class="fa mx-2 mt-3" href="{{ asset('/portfolio') }}"><i class="fa-solid fa-globe fa-2x"></i></a>
-									<a class="fa mx-2 mt-3" href="{{ asset('/portfolio') }}"><i class="fa-brands fa-github fa-2x"></i></a>
+									<a class="fa mx-2 mt-3" href="{{ project.urlSite }}">
+										<i class="fa-solid fa-globe fa-2x"></i>
+									</a>
+									<a class="fa mx-2 mt-3" href="{{ project.urlGithub }}">
+										<i class="fa-brands fa-github fa-2x"></i>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -55,6 +64,5 @@
 				</div>
 			</div>
 		{% endfor %}
-
 	</section>
 {% endblock %}

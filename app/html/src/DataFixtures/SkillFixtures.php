@@ -17,7 +17,7 @@ class SkillFixtures extends Fixture
             'phpunit',
             'api rest',
             'codacy',
-            'blacfire',
+            'blackfire',
             'php',
             'mysql',
             'poo',

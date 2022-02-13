@@ -10,8 +10,8 @@ class PortfolioController extends AbstractController
 {
     public function list(ProjectRepository $projectRepository, SkillRepository $skillRepository)
     {
-        $projects = $projectRepository->findBy([], [], 1);
-        $skills = $skillRepository->findby([], [], 1);
+        $projects = $projectRepository->findAll();
+        $skills = $skillRepository->findAll();
 
         return $this->render('portfolio.html.twig', [
             'projects' => $projects,
