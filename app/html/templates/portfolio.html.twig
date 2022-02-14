@@ -46,17 +46,19 @@
 										{{ project.description }}
 									</p>
 									<div class="d-flex flex-wrap justify-content-around mb-3">
-                						<h5><span class="badge">SYMFONY</span></h5>
-										<h5><span class="badge">COMPOSER</span></h5>
-										<h5><span class="badge">BOOTSTRAP</span></h5>
-										<h5><span class="badge">UML</span></h5>
+										{% for skill in project.skills %}
+                							<h5><span class="badge">
+    											{{ skill.name }}
+											</span></h5>
+										{% endfor %}
               						</div>
-									<a class="fa mx-2 mt-3" href="{{ project.urlSite }}">
+									<a class="fa mx-2 mt-3" href="{{ project.urlSite }}" target="_blank">
 										<i class="fa-solid fa-globe fa-2x"></i>
 									</a>
-									<a class="fa mx-2 mt-3" href="{{ project.urlGithub }}">
+									<a class="fa mx-2 mt-3" href="{{ project.urlGithub }}" target="_blank">
 										<i class="fa-brands fa-github fa-2x"></i>
 									</a>
+									<hr class="d-none d-lg-block mb-0 ms-0" />
 								</div>
 							</div>
 						</div>
