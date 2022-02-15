@@ -12,33 +12,7 @@ class PortfolioFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {        
-        $skills = [
-            'symfony',
-            'composer',
-            'phpunit',
-            'api rest',
-            'codacy',
-            'blackfire',
-            'php',
-            'mysql',
-            'poo',
-            'mvc',
-            'boostrap',
-            'uml',
-            'wordpress',
-            'widgets',
-            'intégration'
-        ];
-
-        foreach($skills as $name) {
-            $skill = new Skill;
-
-            $skill->setName($name)
-                ->setCreatedAt(new DateTimeImmutable())
-                ->setUpdatedAt(new DateTimeImmutable());
-
-            $manager->persist($skill);
-        }
+        $skills = ['symfony', 'composer', 'boostrap', 'uml'];
 
         $project = new Project;
 
@@ -50,6 +24,18 @@ class PortfolioFixtures extends Fixture
             ->setActivated(1)
             ->setCreatedAt(new DateTimeImmutable())
             ->setUpdatedAt(new DateTimeImmutable());
+
+        foreach($skills as $name) {
+            $skill = new Skill;
+
+            $skill->setName($name)
+                ->setCreatedAt(new DateTimeImmutable())
+                ->setUpdatedAt(new DateTimeImmutable());
+
+            $manager->persist($skill);
+
+            $project->addskill($skill);
+        }
 
         $manager->persist($project);
         
