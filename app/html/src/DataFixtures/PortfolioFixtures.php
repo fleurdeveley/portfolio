@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Feature;
 use App\Entity\Project;
 use App\Entity\Skill;
 use DateTimeImmutable;
@@ -12,8 +13,7 @@ class PortfolioFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {        
-        $skills = ['symfony', 'composer', 'boostrap', 'uml'];
-
+        // Add one project
         $project = new Project;
 
         $project->setName('SnowTricks')
@@ -25,6 +25,9 @@ class PortfolioFixtures extends Fixture
             ->setCreatedAt(new DateTimeImmutable())
             ->setUpdatedAt(new DateTimeImmutable());
 
+        // Add skills to the project
+        $skills = ['symfony', 'composer', 'bootstrap', 'uml'];
+
         foreach($skills as $name) {
             $skill = new Skill;
 
@@ -35,6 +38,27 @@ class PortfolioFixtures extends Fixture
             $manager->persist($skill);
 
             $project->addskill($skill);
+        }
+
+        // Add features to the project
+        $features = [
+            'zone d\'administration',
+            'rôles et permissions',
+            'formulaire d\'inscription',
+            'mot de passe oublié'
+        ];
+
+        foreach($features as $text) {
+            $feature = new Feature;
+
+            $feature->setProjects($project->getId(1))
+                ->setText($text)
+                ->setCreatedAt(new DateTimeImmutable())
+                ->setUpdatedAt(new DateTimeImmutable());
+
+            $manager->persist($feature);
+
+            $project->addfeature($feature);
         }
 
         $manager->persist($project);
