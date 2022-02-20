@@ -37,113 +37,111 @@
 			</div>
 
 			{% for project in projects %}
-				{% if project.activated == true %}
-					{% if loop.index is divisible by(2) %}
-						<!-- Even projects Row-->
-						<div class="row gx-0 justify-content-center">
-							<div class="col-lg-6">
-								<img class="img-projects img-fluid" src="/img/{{ project.image }}" alt="{{ project.name }}"/>
-							</div>
+				{% if loop.index is divisible by(2) %}
+					<!-- Even projects Row-->
+					<div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+						<div class="col-lg-6">
+							<img class="img-fluid" src="/img/{{ project.image }}" alt="{{ project.name }}" />
+						</div>
 
-							<div class="col-lg-6 order-lg-first">
-								<div class="bg-black text-center p-3 h-100 project">
-									<div class="d-flex h-100">
-										<div class="project-text w-100 my-auto text-lg-right">
-											<h4 class="text-center text-white mb-3">{{ project.name }}</h4>
-											<p class="text-center mb-0 text-white-50 mb-3">
-												{{ project.description }}
-											</p>
+						<div class="col-lg-6 order-lg-first">
+							<div class="bg-black text-center p-3 h-100 project">
+								<div class="d-flex h-100">
+									<div class="project-text w-100 my-auto text-lg-right">
+										<h4 class="text-center text-white mb-3">{{ project.name }}</h4>
+										<p class="text-center mb-0 text-white-50 mb-3">
+											{{ project.description }}
+										</p>
 
-											<h5 class="h5-feature mb-0 mb-3">
-												<i class="fa-solid fa-screwdriver-wrench"></i> Fonctionnalités :
-											</h5>
-											{% for feature in project.features %}
-												<ul class="ul-feature mb-0 text-white-50 mb-3">
-  													<li>{{ feature.text }}</li>
-												</ul>
+										<h5 class="h5-feature mb-0 mb-3">
+											<i class="fa-solid fa-screwdriver-wrench"></i> Fonctionnalités :
+										</h5>
+										{% for feature in project.features %}
+											<ul class="ul-feature mb-0 text-white-50 mb-3">
+  												<li>{{ feature.text }}</li>
+											</ul>
+										{% endfor %}
+
+										<div class="d-flex flex-wrap justify-content-around mb-3">
+											{% for skill in project.skills %}
+												<h5>
+													<span class="badge">
+														{{ skill.name }}
+													</span>
+												</h5>
 											{% endfor %}
-
-											<div class="d-flex flex-wrap justify-content-around mb-3">
-												{% for skill in project.skills %}
-													<h5>
-														<span class="badge">
-															{{ skill.name }}
-														</span>
-													</h5>
-												{% endfor %}
-											</div>
-
-											{% if project.urlSite is not empty %}
-												<a class="fa mx-2 mt-3" href="{{ project.urlSite }}" target="_blank">
-													<i class="fa-solid fa-globe fa-2x"></i>
-												</a>
-											{% endif %}
-											{% if project.urlGithub is not empty %}
-												<a class="fa mx-2 mt-3" href="{{ project.urlGithub }}" target="_blank">
-													<i class="fa-brands fa-github fa-2x"></i>
-												</a>
-											{% endif %}
-
-											<hr class="d-none d-lg-block mb-0 ms-0"/>
 										</div>
+
+										{% if project.urlSite is not empty %}
+											<a class="fa mx-2 mt-3" href="{{ project.urlSite }}" target="_blank">
+												<i class="fa-solid fa-globe fa-2x"></i>
+											</a>
+										{% endif %}
+										{% if project.urlGithub is not empty %}
+											<a class="fa mx-2 mt-3" href="{{ project.urlGithub }}" target="_blank">
+												<i class="fa-brands fa-github fa-2x"></i>
+											</a>
+										{% endif %}
+
+										<hr class="d-none d-lg-block mb-0 ms-0"/>
 									</div>
 								</div>
 							</div>
 						</div>
-					{% else %}
+					</div>
+				{% else %}
 
-						<!-- Odd projects Row-->
-						<div class="row gx-0 mb-5 mb-lg-0 justify-content-center {{ cycle(['odd'], loop.index0) }}">
-							<div class="col-lg-6">
-								<img class="img-projects img-fluid" src="/img/{{  project.image }}" alt="{{ project.name }}"/>
-							</div>
+					<!-- Odd projects Row-->
+					<div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+						<div class="col-lg-6">
+							<img class="img-fluid" src="/img/{{ project.image }}" alt="{{ project.name }}" />
+						</div>
+						
+						<div class="col-lg-6">
+							<div class="bg-black text-center p-3 h-100 project">
+								<div class="d-flex h-100">
+									<div class="project-text w-100 my-auto text-center text-lg-left">
+										<h4 class="text-white mb-3">{{ project.name }}</h4>
+										<p class="mb-0 text-white-50 mb-3">
+											{{ project.description }}
+										</p>
 
-							<div class="col-lg-6">
-								<div class="bg-black text-center p-3 h-100 project">
-									<div class="d-flex h-100">
-										<div class="project-text w-100 my-auto text-center text-lg-left">
-											<h4 class="text-white mb-3">{{ project.name }}</h4>
-											<p class="mb-0 text-white-50 mb-3">
-												{{ project.description }}
-											</p>
+										<h5 class="h5-feature mb-0 text-white-50 mb-3">
+											<i class="fa-solid fa-screwdriver-wrench"></i> Fonctionnalités :
+										</h5>
+										{% for feature in project.features %}
+											<ul class="ul-feature mb-0 text-white-50 mb-3">
+  												<li>{{ feature.text }}</li>
+											</ul>
+										{% endfor %}
 
-											<h5 class="h5-feature mb-0 text-white-50 mb-3">
-												<i class="fa-solid fa-screwdriver-wrench"></i> Fonctionnalités :
-											</h5>
-											{% for feature in project.features %}
-												<ul class="ul-feature mb-0 text-white-50 mb-3">
-  													<li>{{ feature.text }}</li>
-												</ul>
+										<div class="d-flex flex-wrap justify-content-around mb-3">
+											{% for skill in project.skills %}
+												<h5>
+													<span class="badge">
+														{{ skill.name }}
+													</span>
+												</h5>
 											{% endfor %}
-
-											<div class="d-flex flex-wrap justify-content-around mb-3">
-												{% for skill in project.skills %}
-													<h5>
-														<span class="badge">
-															{{ skill.name }}
-														</span>
-													</h5>
-												{% endfor %}
-											</div>
-
-											{% if project.urlSite is not empty %}
-												<a class="fa mx-2 mt-3" href="{{ project.urlSite }}" target="_blank">
-													<i class="fa-solid fa-globe fa-2x"></i>
-												</a>
-											{% endif %}
-											{% if project.urlGithub is not empty %}
-												<a class="fa mx-2 mt-3" href="{{ project.urlGithub }}" target="_blank">
-													<i class="fa-brands fa-github fa-2x"></i>
-												</a>
-											{% endif %}
-
-											<hr class="d-none d-lg-block mb-0 ms-0"/>
 										</div>
+
+										{% if project.urlSite is not empty %}
+											<a class="fa mx-2 mt-3" href="{{ project.urlSite }}" target="_blank">
+												<i class="fa-solid fa-globe fa-2x"></i>
+											</a>
+										{% endif %}
+										{% if project.urlGithub is not empty %}
+											<a class="fa mx-2 mt-3" href="{{ project.urlGithub }}" target="_blank">
+												<i class="fa-brands fa-github fa-2x"></i>
+											</a>
+										{% endif %}
+
+										<hr class="d-none d-lg-block mb-0 ms-0"/>
 									</div>
 								</div>
 							</div>
 						</div>
-					{% endif %}
+					</div>
 				{% endif %}
 			{% endfor %}
 		</div>
