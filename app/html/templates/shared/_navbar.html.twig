@@ -28,6 +28,16 @@
 					<a class="nav-link" href="{{ asset('/img/CV_Fleur_Develey.pdf') }}" 
 					target="_blank">CV</a>
 				</li>
+
+				{% if app.user %}
+					<li class="nav-item">
+						<a class="nav-link" href="{{ asset('/logout') }}"><i class="fa-solid fa-lock-open"></i></a>
+					</li>
+				{% else %}
+					<li class="nav-item">
+						<a class="nav-link" href="{{ asset('/login') }}"><i class="fa-solid fa-lock"></i></a>
+					</li>
+				{% endif %}
 			</ul>
 		</div>
 	</div>

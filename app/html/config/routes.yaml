@@ -5,3 +5,11 @@ index:
 portfolio_list:
     path: /portfolio
     controller: App\Controller\PortfolioController::list
+
+login:
+   path: /login
+   controller: App\Controller\LoginController::login
+
+logout:
+   path: /logout
+   controller: App\Controller\LoginController::logout
