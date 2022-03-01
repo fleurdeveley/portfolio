@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Fleur Develey - Dashboard {% endblock %}
+
+{% block style %}
+	<style>
+		body {
+			background-color: #f8f9fa;
+		}
+	</style>
+{% endblock %}
+
+{% block body %}
+	<section id="dashboard">
+		<h3 class="text-center">DASHBORD Administrateur</h3>
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-center">
+			<div class="container px-4 px-lg-5">
+                <button class="navbar-toggler justify-content-around flex-grow-1 pe-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+
+				<div class="collapse navbar-collapse" id="navbarText">
+					<ul class="navbar-nav justify-content-around flex-grow-1 pe-1">
+						<li class="nav-item active">
+							<a class="nav-link" href="#!">Compétences</a>
+						</li>
+
+						<li class="nav-item active">
+							<a class="nav-link" href="#!">Fonctionnalités</a>
+						</li>
+
+                        <li class="nav-item active">
+							<a class="nav-link" href="#!">Projets</a>
+						</li>
+
+                        <li class="nav-item active">
+							<a class="nav-link" href="#!">Utilisateurs</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+{% endblock %}
