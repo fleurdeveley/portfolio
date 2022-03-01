@@ -22,9 +22,9 @@ class UserFixtures extends Fixture
         //add one admin user
         $admin = new User();
 
-        $admin->setEmail("fleurdeveley@gmail.com")
+        $admin->setEmail($_ENV['LOGIN'])
             ->setRoles(['ROLE_ADMIN'])
-            ->setPassword($this->hasher->hashPassword($admin, 'garfield06'));
+            ->setPassword($this->hasher->hashPassword($admin, $_ENV['PASSWORD']));
 
         $manager->persist($admin);
         
