@@ -53,6 +53,8 @@ main.container {
 }
 
 .fa-globe,
-.fa-github {
+.fa-github,
+.fa-github-square,
+.fa-linkedin {
   color:#fff;
 }
