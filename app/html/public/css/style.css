@@ -3,45 +3,8 @@ body {
   font-size: 20px !important;
 }
 
-#home {
-  margin-top: 250px;
-}
-
-ul{
-  list-style-type: none;
-}
-
-.h5-feature,
-.ul-feature {
-  text-align: left !important;
-}
-
-.h5-feature {
-  color: #fff !important;
-}
-
-#projects {
-  display: block;
-  margin-top: 60px;
-}
-
-.img-projects {
-  max-width: 100%;
-  height: auto;
-}
-
-.btn {
-  padding: 1.10rem;
-  font-size: 16px;
-}
-
-.btn,
-.btn-portfolio {
-  padding: 1.10rem;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 10rem;
+main.container {
+  margin-top: 70px !important;
 }
 
 .btn:hover,
@@ -55,6 +18,38 @@ ul{
 .badge {
   border-color: #f4623a;
   text-transform: uppercase;
+}
+
+/* home */
+#home {
+  margin-top: 250px;
+}
+
+#home .btn {
+  padding: 1.10rem;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10rem;
+}
+
+/* portfolio */
+#portfolio ul{
+  list-style-type: none;
+}
+
+.h5-feature,
+.ul-feature {
+  text-align: left !important;
+}
+
+.h5-feature {
+  color: #fff !important;
+}
+
+.img-projects {
+  max-width: 100%;
+  height: auto;
 }
 
 .fa-globe,

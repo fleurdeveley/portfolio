@@ -1,0 +1,60 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Fleur Develey - Dashboard {% endblock %}
+
+{% block style %}
+	<style>
+		body {
+			background-color: #f8f9fa;
+		}
+	</style>
+{% endblock %}
+
+{% block body %}
+	<section id="dashboard">
+		<div class="container px-4 px-lg-5">
+			<div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+				<div class="col-xl-8 col-lg-7">
+					<img class="img-fluid mb-3 mb-lg-0" src="{{ asset('/img/dashboard.png') }}" alt="desk"/>
+				</div>
+
+				<div class="col-xl-4 col-lg-5">
+					<div class="featured-text text-center text-lg-left">
+						<h3 class="text-uppercase">dashboard</h3>
+						<p class="text-black-50 mb-0">
+							Partie Administration
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-center">
+			<div class="container px-4 px-lg-5">
+                <button class="navbar-toggler justify-content-around flex-grow-1 pe-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+
+				<div class="collapse navbar-collapse" id="navbarText">
+					<ul class="navbar-nav justify-content-around flex-grow-1 pe-1">
+						<li class="nav-item active">
+							<a class="nav-link" href="#!">Compétences</a>
+						</li>
+
+						<li class="nav-item active">
+							<a class="nav-link" href="#!">Fonctionnalités</a>
+						</li>
+
+                        <li class="nav-item active">
+							<a class="nav-link" href="#!">Projets</a>
+						</li>
+
+                        <li class="nav-item active">
+							<a class="nav-link" href="#!">Utilisateurs</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+{% endblock %}
