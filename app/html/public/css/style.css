@@ -25,7 +25,18 @@ main.container {
   margin-top: 250px;
 }
 
-#home .btn {
+/* contact */
+#contact hr.divider {
+  height: 0.2rem;
+  max-width: 3.25rem;
+  margin: 1.5rem auto;
+  background-color: #f4623a;
+  opacity: 1;
+}
+
+/* button */
+#home .btn,
+#contact .btn {
   padding: 1.10rem;
   font-size: 16px;
   font-weight: bold;
@@ -52,6 +63,7 @@ main.container {
   height: auto;
 }
 
+/* font awesome */
 .fa-globe,
 .fa-github,
 .fa-github-square,
