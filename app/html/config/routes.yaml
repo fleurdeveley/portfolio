@@ -2,9 +2,13 @@ index:
    path: /
    controller: App\Controller\HomeController::index
 
-portfolio_index:
-    path: /portfolio
-    controller: App\Controller\PortfolioController::index
+contact_index:
+    path: /contact
+    controller: App\Controller\ContactController::index
+
+dashboard_index:
+    path: /dashboard
+    controller: App\Controller\DashboardController::index
 
 login:
    path: /login
@@ -14,6 +18,6 @@ logout:
    path: /logout
    controller: App\Controller\LoginController::logout
 
-dashboard_index:
-    path: /dashboard
-    controller: App\Controller\DashboardController::index
+portfolio_index:
+    path: /portfolio
+    controller: App\Controller\PortfolioController::index
