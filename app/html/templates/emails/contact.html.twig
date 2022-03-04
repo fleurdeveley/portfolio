@@ -1,15 +1,88 @@
-<p>
-    Bonjour,
-    <br> <br>
-    Tu as une nouvelle demande : 
-    <br> <br>
-    Prénom et Nom : {{ fullName }}
-    <br>
-    Email : {{ from }}
-    <br>
-    Téléphone : {{ phone }}
-    <br>
-    Message : {{ message }}
-    <br> <br>
-    Merci de prendre contact avec la personne !
-</p>
+<style type="text/css">		
+	body {
+		width: 100% !important; 
+		-webkit-text-size-adjust: 100%; 
+		-ms-text-size-adjust: 100%;  
+		margin: 0!important; 
+		padding: 0!important;
+	}
+
+    td { border-collapse: collapse; }
+
+    img { 
+		outline: none;
+		text-decoration: none;
+		-ms-interpolation-mode: bicubic; 
+	}
+
+    @media screen and (max-width: 480px) {
+		.edito {
+			width: 320px !important;
+			height: auto !important;
+			text-align: center !important;
+			padding-top: 10px !important;
+			padding-bottom: 10px !important;
+			display: block !important;
+			font-size: 14px !important;
+		}
+
+        .hide {
+			width: 100% !important;
+            height: auto !important;
+		}		
+        
+        .resize {
+			width: 320px !important;
+			display: block !important;
+			height:auto !important;
+		}
+	}
+</style>
+
+<table width="640" border="0" cellpadding="0" cellspacing="0" align="center" class="resize">
+	<tbody>
+        <tr>
+			<td width="500" height="100">
+				<img src="{{ absolute_url('/img/logo.png') }}" width="500" height="100" alt="logo" style="display:block; margin-left:auto; margin-right:auto; " border="0" class="hide">
+                <br> <br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table width="640" border="0" cellpadding="0" cellspacing="0" align="center" class="resize">
+	<tbody>
+        <tr>
+        	<td width="640" align="center" class="edito" style="font-size:25px; font-family:Arial, Helvetica, sans-serif; line-height:1.4;">
+               	<span style="font-size:25px; font-family:Arial, Helvetica, sans-serif; font-weight:600; color:#BC8494;">
+                    Email de contact
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table width="640" border="0" cellpadding="0" cellspacing="0" align="center" class="resize">
+	<tbody>
+        <tr>
+			<td width="640" align="center" class="edito" style="font-size:15px; font-family: rial, Helvetica, sans-serif; line-height:1.4;">
+				<span style="font-size:20px; font-family:Arial, Helvetica, sans-serif; font-weight:400; color:#5A5A5A;">
+                        <br> <br>
+                        Bonjour Fleur DEVELEY,
+                        <br> <br>
+                        Tu as une nouvelle demande : 
+                        <br> <br>
+                        Prénom et Nom : {{ fullName }}
+                        <br>
+                        Email : {{ from }}
+                        <br>
+                        Téléphone : {{ phone }}
+                        <br> <br>
+                        Message : {{ message }}
+                        <br> <br>
+                        Merci de prendre contact avec cette personne ! 
+                </span>
+            </td>
+		</tr>
+	</tbody>
+</table>
