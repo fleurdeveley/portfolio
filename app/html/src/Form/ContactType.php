@@ -18,7 +18,6 @@ class ContactType extends AbstractType
         $builder
             ->add('fullName', TextType::class, [
                 'label' => 'Prénom et Nom',
-                'attr' => ['placeholder' => 'Vorname '],
                 'attr' => ['class' => 'form-control mb-3'],
             ])
             ->add('email', EmailType::class, [
