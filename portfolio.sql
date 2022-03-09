@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : portfolio_mysql
--- Généré le : Dim 27 fév. 2022 à 18:05
+-- Généré le : mer. 09 mars 2022 à 06:25
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.4.8
 
