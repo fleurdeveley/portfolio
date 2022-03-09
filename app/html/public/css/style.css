@@ -36,8 +36,9 @@ main.container {
 }
 
 /* button */
-#home .btn,
-#contact .btn {
+#contact .btn,
+#error .btn,
+#home .btn {
   padding: 1.10rem;
   font-size: 16px;
   font-weight: bold;
