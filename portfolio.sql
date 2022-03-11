@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : portfolio_mysql
--- Généré le : mer. 09 mars 2022 à 06:25
+-- Généré le : ven. 11 mars 2022 à 10:03
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.4.8
 
@@ -102,8 +102,8 @@ CREATE TABLE `project` (
 INSERT INTO `project` (`id`, `name`, `description`, `image`, `url_site`, `url_github`, `activated`, `created_at`, `updated_at`) VALUES
 (1, 'SnowTricks', 'site communautaire autour du snowboard', 'snowtricks.png', 'https://projet6.fleurdeveley.fr/', 'https://github.com/fleurdeveley/OC_P6_SnowTricks', 1, '2022-02-24 15:28:27', '2022-02-24 15:28:27'),
 (2, 'ToDoList', 'amélioration d’une application existante sur la gestion d’une To Do List', 'todolist.png', '', 'https://github.com/fleurdeveley/OC_P8_ToDo-Co', 1, '2022-02-24 15:28:27', '2022-02-24 15:28:27'),
-(3, 'BileMo', 'création d\'un service web exposant une API mettant à disposition un catalogue de smartphones, pour du B2B', 'api.png', '', 'https://github.com/fleurdeveley/OC_P7_BileMo', 1, '2022-02-24 15:28:27', '2022-02-24 15:28:27'),
-(4, 'Chalets et caviar', 'site d\'une agence immobilière de prestige à Courchevel', 'chaletsetcaviar.png', '', 'https://projet2.fleurdeveley.fr/', 1, '2022-02-24 15:28:27', '2022-02-24 15:28:27');
+(3, 'BileMo', 'création d\'un service web exposant une API mettant à disposition un catalogue de smartphones, pour du B2B', 'api.png', 'https://projet7.fleurdeveley.fr/api/doc', 'https://github.com/fleurdeveley/OC_P7_BileMo', 1, '2022-02-24 15:28:27', '2022-02-24 15:28:27'),
+(4, 'Chalets et caviar', 'site d\'une agence immobilière de prestige à Courchevel', 'chaletsetcaviar.png', 'https://projet2.fleurdeveley.fr/', '', 1, '2022-02-24 15:28:27', '2022-02-24 15:28:27');
 
 -- --------------------------------------------------------
 
