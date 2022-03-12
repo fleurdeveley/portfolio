@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="Développeuse PHP / Symfony sur le secteur d'Antibes 
-        et Sophia-Antipolis, je suis à la recherche d'opportunités.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Développeuse web (PHP/Symfony), sur le secteur d'Antibes 
+        et Sophia-Antipolis, retrouvez mes différents projets.">
+		<meta property="og:image" content="{{ absolute_url('/img/bureau.png') }}">
 
 		<title>
-			{% block title %} Fleur Develey {% endblock %}
+			{% block title %}Fleur Develey{% endblock %}
 		</title>
 
 		{% block stylesheets %}
@@ -42,6 +43,6 @@
 
 	    {% block javascripts %}
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-	    {% endblock %}
+		{% endblock %}
     </body>
 </html>
