@@ -32,6 +32,9 @@ class ContactType extends AbstractType
                 'label' => 'Message',
                 'attr' => ['rows' => 6, 'class' => 'form-control mb-3'],
             ])
+            ->add('captcha', ReCaptchaType::class, [
+                'type' => 'checkbox' // (invisible, checkbox)
+            ])
             ->add('save', SubmitType::class, [
                 'label' => 'Envoyer',
                 'attr' => ['class' => 'btn form-control mb-3'],

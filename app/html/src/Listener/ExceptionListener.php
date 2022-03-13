@@ -29,8 +29,12 @@ class ExceptionListener
             $response = new Response($this->twig->render('listener/error.html.twig', ['message' => 'Oups, la page n\'existe pas.']));
             $response->setStatusCode($exception->getStatusCode());
         } else {
-            $response = new Response($this->twig->render('listener/error.html.twig', ['message' => 'Oups, une erreur est survenue.']));
-            $response->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
+            if ($_ENV['APP_ENV'] === 'dev') {
+                dd($exception);
+            } else {
+                $response = new Response($this->twig->render('listener/error.html.twig', ['message' => 'Oups, une erreur est survenue.']));
+                $response->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
+            }
         }
 
         // sends the modified response object to the event
